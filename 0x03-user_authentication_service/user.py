@@ -16,7 +16,3 @@ class User(Base):
     hashed_password = Column(String(250), nullable=False)
     session_id = Column(String(250), nullable=False)
     reset_token = Column(String(250), nullable=False)
-
-    def __repr__(self):
-        return "<User(name='%s', fullname='%s', nickname='%s')>" % (
-                self.name, self.fullname, self.nickname)
