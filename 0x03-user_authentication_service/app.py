@@ -2,15 +2,17 @@
 """
 basic Flask app
 """
-
-
 from flask import Flask, jsonify
 
 app = Flask(__name__)
 
 
-@app.get("/")
-def index():
+@app.route("/", methods=["GET"], strict_slashes=False)
+def index() -> str:
+    """GET /
+    Return:
+        - The home page's payload.
+    """
     return jsonify({"message": "Bienvenue"})
 
 
