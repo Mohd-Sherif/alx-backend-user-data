@@ -111,7 +111,7 @@ class Auth:
         """
         Update Password
         """
-        user =None
+        user = None
         try:
             user = self._db.find_user_by(reset_token=reset_token)
         except NoResultFound:
