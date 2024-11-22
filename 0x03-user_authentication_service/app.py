@@ -104,7 +104,7 @@ def update_password() -> str:
         - The user's password updated payload.
     """
     email = request.form.get("email")
-    reset_token = request.form.get("reset_password")
+    reset_token = request.form.get("reset_token")
     new_password = request.form.get("new_password")
     try:
         AUTH.update_password(reset_token=reset_token, password=new_password)
